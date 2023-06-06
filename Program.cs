@@ -5,58 +5,61 @@ namespace Course
 {
     public class Program
     {
+       
+       
+
+          public static int Soma(int a, int b)
+            {
+                int resultado;
+
+                resultado = a + b;
+
+                return resultado;   
+            }
+           public static double Divi(double a, double b)
+            {
+                double resulatdo;
+
+                resulatdo = a / b;
+
+                return resulatdo;
+            }
+
+           public static int Sulb(int a, int b)
+            {
+                int resultado;
+
+                resultado = a - b;
+
+                return resultado;
+            }
+
+            public static int Mult(int a, int b)
+            {
+                int resultado;
+
+                resultado = a * b;
+
+                return resultado;
+            }
+
         public static void Main(string[] args)
         {
-            char resposta;
+            int a, b;
+            int soma = Soma(5, 7);
+            int sulb = Sulb(5, 7);
+            double divi = Divi(5, 3);
+            int mult = Mult(5, 7);
 
+            Console.WriteLine(soma.ToString(CultureInfo.InvariantCulture));
+            Console.WriteLine(divi.ToString("F4",CultureInfo.InvariantCulture));
+            Console.WriteLine(sulb.ToString(CultureInfo.InvariantCulture));
+            Console.WriteLine(mult.ToString( CultureInfo.InvariantCulture));
 
-            do
-            {
-
-                float num1, num2;
-                char op;
-
-                Console.WriteLine("entre com o operador: +, -, /, *: ");
-                op = char.Parse(Console.ReadLine());
-
-                Console.WriteLine("entre com dois valores: ");
-                num1 = float.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                num2 = float.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-                switch (op)
-                {
-                    case '+':
-                        Console.Write(num1 + " + " + num2 + "=");
-                        float soma1 = num1 + num2;
-                        Console.WriteLine(soma1);
-                        break;
-
-                    case '-':
-                        Console.Write(num1 + "-" + num2 + "=");
-                        float soma2 = num1 - num2;
-                        Console.WriteLine(soma2);
-                        break;
-
-                    case '/':
-                        Console.WriteLine(num1 + "/" + num2 + "=");
-                        float soma3 = num1 / num2;
-                        Console.WriteLine(soma3);
-                        break;
-
-                    case '*':
-                        Console.WriteLine(num1 + "*" + num2 + "=");
-                        float soma4 = num1 * num2;
-                        Console.WriteLine(soma4);
-                        break;
-
-                    default:
-                        Console.WriteLine("operador errado, insira operador correto");
-                        break;
-                }
-                Console.WriteLine("deseja fazer a conta de novo(S/N): ");
-                resposta = char.Parse(Console.ReadLine());
-            }
-            while (resposta == 's' || resposta == 'S');
         }
+
+
+
+
     }
 }
