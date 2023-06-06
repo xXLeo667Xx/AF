@@ -9,15 +9,18 @@ namespace Course
         {
             double num, i = 1;
 
-            Console.WriteLine("digite um numero intero positivo:");
-            num = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            while (i <= num)
+            do
             {
-                Console.WriteLine(i.ToString(CultureInfo.InvariantCulture) + " ");
 
-                i++;
+                Console.WriteLine("digite um numero de 1 a 10 ");
+                num = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             }
+            while (num < 1 || num > 10);
+               
+                    Console.WriteLine("voce digitou o numero " + num +".");
+
+                
+            
         }   
 
     }
