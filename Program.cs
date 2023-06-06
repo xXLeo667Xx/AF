@@ -7,18 +7,17 @@ namespace Course
     {
         public static void Main(string[] args)
         {
-            double num;
+            double num, i = 1;
 
-            Console.WriteLine("digite um numero intero psitivo:");
+            Console.WriteLine("digite um numero intero positivo:");
             num = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine("os primeiros numeros " + num + " numeros pares são:");
-
-            for (int i = 2; i <= num * 2; i += 2)
+            while (i <= num)
             {
                 Console.WriteLine(i.ToString(CultureInfo.InvariantCulture) + " ");
-            }
 
+                i++;
+            }
         }   
 
     }
